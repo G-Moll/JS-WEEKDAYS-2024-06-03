@@ -1,0 +1,19 @@
+w3schools
+
+
+json validator
+https://jsonplaceholder.typicode.com/users
+localhost://
+
+
+HTML esté corriendo en un servidor local
+Live Server
+
+JSON
+data.json
+localhost:8080/data/data.json
+
+index.html
+	css
+	js
+

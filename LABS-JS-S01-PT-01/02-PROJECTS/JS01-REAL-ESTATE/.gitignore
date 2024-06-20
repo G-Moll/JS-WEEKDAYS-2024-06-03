@@ -1,0 +1,4 @@
+db/*
+front/*
+!front/js/
+!front/data/

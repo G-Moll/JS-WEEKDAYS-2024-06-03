@@ -1,3 +1,6 @@
+var holderProperties = document.getElementById( 'holder-properties' );
+// console.log( holderProperties );
+
 // AJAX
 // Asynchrnous JavaScript And XML
 
@@ -10,7 +13,18 @@ xhr.send();
 xhr.addEventListener( "load", dataLoaded  );
 
 function dataLoaded( e ) {
-	console.log( JSON.parse( e.target.responseText ) );
+	var jsonData = JSON.parse( e.target.responseText );
+
+	var htmlData = "";
+	for( var i = 0; i < jsonData.data.length; i++ ) {
+		var currentRow = jsonData.data[ i ]; 
+		htmlData += "<h3>" + currentRow.property + "</h3>" +
+		"<p>Location: " + currentRow.location + "</p>" +
+		"<p>Price: " + currentRow.price + "</p>" +
+		"<button>Comprar</button>";
+	}
+	holderProperties.innerHTML = htmlData;
+	console.log( htmlData );
 }
 
 

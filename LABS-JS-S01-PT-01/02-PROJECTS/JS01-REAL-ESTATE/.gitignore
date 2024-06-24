@@ -1,3 +1,4 @@
+.gitignore
 db/*
 front/*
 !front/js/

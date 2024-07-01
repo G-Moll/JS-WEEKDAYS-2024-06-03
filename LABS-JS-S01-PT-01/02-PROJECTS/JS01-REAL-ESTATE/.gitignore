@@ -1,9 +1,7 @@
 _drafts
 
 db/*
-!db/db-create-select.PNG
-!db/db-insert.PNG
-!db/db-sketch.jpg
+!db/drafts/
 
 front/*
 !front/js/

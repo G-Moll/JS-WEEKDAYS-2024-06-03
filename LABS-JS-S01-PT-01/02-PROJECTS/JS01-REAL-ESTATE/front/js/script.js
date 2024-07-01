@@ -4,7 +4,7 @@ var holderProperties = document.getElementById( 'holder-properties' );
 // AJAX
 // Asynchrnous JavaScript And XML
 
-var endpoint = "http://localhost:8080/index-select.php";
+var endpoint = "http://localhost:8080/crud/index-select.php";
 var xhr = new XMLHttpRequest();
 xhr.open( "GET", endpoint, true );
 xhr.send();

@@ -1,6 +1,6 @@
 var propertyData = "House ER New 2025";
 var locationData = true;
-var priceData = 80000;
+var priceData = 87600;
 
 var endpoint = "http://localhost:8080/crud/index-insert.php";
 var xhr = new XMLHttpRequest();

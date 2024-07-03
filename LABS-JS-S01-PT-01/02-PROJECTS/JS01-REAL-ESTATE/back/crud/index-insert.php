@@ -8,26 +8,18 @@ $db_name = "rdk_js_weekdays";
 
 $property = $_POST[ 'property' ];
 $location = $_POST[ 'location' ];
-$price = $_POST[ 'price' ];
+$price 	  = $_POST[ 'price' ];
 
 $conn = mysqli_connect( $db_host, $db_user, $db_pass, $db_name );
-
 if( ! $conn ) { die( "DB connection failed.."  ); }
 
 $query = "INSERT INTO draftproperties VALUES( '$property', $location, $price )";
 $query_result = mysqli_query( $conn, $query );
+$message = $query_result ? [ "message" => "OK" ] : [ "message" => "NO" ];
 
-if( $query_result ) {
-	echo "OK";
-}
-else {
-	echo "NO";
-}
-
-// $json_data = [
-// 	"data" => $all_records
-// ];
-
-// echo json_encode( $json_data );
+$json_data = [
+	"data" => $message
+];
+echo json_encode( $json_data );
 
 ?>

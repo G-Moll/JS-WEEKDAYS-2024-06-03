@@ -24,6 +24,7 @@ function dataLoaded( e ) {
 	}
 	holderProperties.innerHTML = htmlData;
 	console.log( htmlData );
+	console.log( jsonData );
 }
 
 

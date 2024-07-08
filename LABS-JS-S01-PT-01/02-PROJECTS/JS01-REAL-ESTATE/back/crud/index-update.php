@@ -16,7 +16,7 @@ if( ! $conn ) { die( "DB connection failed.."  ); }
 
 $query = "UPDATE draftproperties SET property='$property', location=$location, price=$price WHERE id=$id";
 $query_result = mysqli_query( $conn, $query );
-$message = $query_result ? [ "message" => "OK, updated record" ] : [ "message" => "NO, record could not updated" ];
+$message = $query_result ? [ "message" => "OK, updated record" ] : [ "message" => "NO, record could not be updated" ];
 
 $json_data = [
 	"data" => $message

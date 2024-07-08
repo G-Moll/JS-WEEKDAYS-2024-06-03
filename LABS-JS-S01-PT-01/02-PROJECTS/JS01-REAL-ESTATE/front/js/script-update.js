@@ -4,12 +4,6 @@ var propertyData = "House ER New 2025";
 var locationData = true;
 var priceData = 87600;
 
-// Alternative way to get DOM elements
-// var formInputs = document
-// 	.getElementsByTagName( "form" )[ 0 ]
-// 	.getElementsByTagName( "input" );
-// console.log( formInputs );
-
 // DOM Elements
 var inputs = document.getElementsByTagName( "input" );
 var inputPropety  = inputs[ 0 ];

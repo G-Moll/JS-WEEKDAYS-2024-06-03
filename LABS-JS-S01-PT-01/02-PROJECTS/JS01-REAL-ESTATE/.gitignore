@@ -3,6 +3,6 @@ _drafts
 db/*
 !db/drafts/
 
-front/*
-!front/js/
-!front/data/
+# front/*
+# !front/js/
+# !front/data/

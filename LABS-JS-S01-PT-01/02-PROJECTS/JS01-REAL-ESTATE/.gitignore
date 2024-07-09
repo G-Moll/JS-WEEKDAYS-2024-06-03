@@ -1,7 +1,7 @@
 _drafts
 
-db/*
-!db/drafts/
+# db/*
+# !db/drafts/
 
 # front/*
 # !front/js/

@@ -1,16 +1,34 @@
+// Global variables
 var propertyData = "House ER New 2025";
 var locationData = true;
 var priceData = 87600;
-
 var endpoint = "http://localhost:8080/crud/index-insert.php";
-var xhr = new XMLHttpRequest();
-xhr.open( "POST", endpoint, true );
-xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded; charset=UTF-8" );
-xhr.send( "property=" + propertyData + "&location=" + locationData + "&price=" + priceData );
 
-xhr.addEventListener( "load", dataLoaded  );
+
+// DOM objects
+var form = document.getElementsByTagName( "form" )[ 0 ];
+var formInputs = form.getElementsByTagName( "input" );
+var inputProperty = formInputs[ 0 ];
+var inputLocation = formInputs[ 1 ];
+var inputPrice 	  = formInputs[ 2 ];
+var inputSubmit   = formInputs[ 3 ];
+
+inputSubmit.addEventListener( "click", sendData );
+
+// Event Handlers
+function sendData( e ) {
+	e.preventDefault();
+	console.log( inputProperty.value, inputLocation.value, inputPrice.value );
+
+	var xhr = new XMLHttpRequest();
+	xhr.open( "POST", endpoint, true );
+	xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded; charset=UTF-8" );
+	xhr.send( "property=" + inputProperty.value + "&location=" + inputLocation.value + "&price=" + inputPrice.value );
+	xhr.addEventListener( "load", dataLoaded  );
+}
 
 function dataLoaded( e ) {
 	var jsonData = JSON.parse( e.target.responseText );
 	console.log( jsonData );
+	form.reset();
 }

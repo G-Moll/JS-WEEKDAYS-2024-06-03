@@ -9,22 +9,23 @@ var xhr = new XMLHttpRequest();
 xhr.open( "GET", endpoint, true );
 xhr.send();
 
-xhr.addEventListener( "load", dataLoaded  );
+xhr.addEventListener( "load", loadSelectedData  );
 
-function dataLoaded( e ) {
+function loadSelectedData( e ) {
 	var jsonData = JSON.parse( e.target.responseText );
 
 	var htmlData = "";
 	for( var i = 0; i < jsonData.data.length; i++ ) {
 		var currentRow = jsonData.data[ i ]; 
 		htmlData += "<h3>" + currentRow.property + "</h3>" +
+		"<p>ID: " + currentRow.id + "</p>" +
 		"<p>Location: " + currentRow.location + "</p>" +
 		"<p>Price: " + currentRow.price + "</p>" +
 		"<button>Comprar</button>";
 	}
 	holderProperties.innerHTML = htmlData;
-	console.log( htmlData );
-	console.log( jsonData );
+	// console.log( htmlData );
+	// console.log( jsonData );
 }
 
 

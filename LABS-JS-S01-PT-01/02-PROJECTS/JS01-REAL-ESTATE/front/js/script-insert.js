@@ -1,65 +1,38 @@
 // Global variables
-<<<<<<< HEAD
-var propertyData = "House ER New 2025";
-var locationData = true;
-var priceData = 87600;
 var endpoint = "http://localhost:8080/crud/index-insert.php";
-
+// var propertyData = "House ER New 2025";
+// var locationData = true;
+// var priceData = 87600;
 
 // DOM objects
 var form = document.getElementsByTagName( "form" )[ 0 ];
 var formInputs = form.getElementsByTagName( "input" );
-var inputProperty = formInputs[ 0 ];
-var inputLocation = formInputs[ 1 ];
-var inputPrice 	  = formInputs[ 2 ];
-var inputSubmit   = formInputs[ 3 ];
+var inputId        = formInputs[ 0 ];
+var inputAvailable = formInputs[ 1 ];
+var inputProperty  = formInputs[ 2 ];
+var inputLocation  = formInputs[ 3 ];
+var inputPrice     = formInputs[ 4 ];
+var insertRecord   = document.getElementById( "insertRecord" );
 
-=======
-var endpoint = "http://localhost:8080/crud/index-insert.php";
-var propertyData = "House ER New 2025";
-var locationData = true;
-var priceData = 87600;
-
-// Alternative way to get DOM elements
-// var formInputs = document
-// 	.getElementsByTagName( "form" )[ 0 ]
-// 	.getElementsByTagName( "input" );
-// console.log( formInputs );
-
-// DOM Elements
-var inputs = document.getElementsByTagName( "input" );
-var inputPropety  = inputs[ 0 ];
-var inputLocation = inputs[ 1 ];
-var inputPrice 	  = inputs[ 2 ];
-var inputSubmit   = inputs[ 3 ];
 
 // EventListeners
->>>>>>> 57883f60af79de940a5887666d5b9d80eca7ce74
-inputSubmit.addEventListener( "click", sendData );
+insertRecord.addEventListener( "click", sendInsertData );
 
 // Event Handlers
-function sendData( e ) {
-	e.preventDefault();
-<<<<<<< HEAD
-	console.log( inputProperty.value, inputLocation.value, inputPrice.value );
-=======
-	console.log( inputPropety.value, inputLocation.value, inputPrice.value );
->>>>>>> 57883f60af79de940a5887666d5b9d80eca7ce74
+function sendInsertData( e ) {
+    e.preventDefault();
+    console.log( inputProperty.value, inputLocation.value, inputPrice.value );
 
-	var xhr = new XMLHttpRequest();
-	xhr.open( "POST", endpoint, true );
-	xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded; charset=UTF-8" );
-<<<<<<< HEAD
-	xhr.send( "property=" + inputProperty.value + "&location=" + inputLocation.value + "&price=" + inputPrice.value );
-=======
-	xhr.send( "property=" + inputPropety.value + "&location=" + inputLocation.value + "&price=" + inputPrice.value );
-
->>>>>>> 57883f60af79de940a5887666d5b9d80eca7ce74
-	xhr.addEventListener( "load", dataLoaded  );
+    var xhr = new XMLHttpRequest();
+    xhr.open( "POST", endpoint, true );
+    xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded; charset=UTF-8" );
+    xhr.send( "property=" + inputProperty.value + "&location=" + inputLocation.value + "&price=" + inputPrice.value );
+    xhr.addEventListener( "load", loadInsertedData  );
 }
 
-function dataLoaded( e ) {
-	var jsonData = JSON.parse( e.target.responseText );
-	console.log( jsonData );
-	form.reset();
+function loadInsertedData( e ) {
+    // var jsonData = JSON.parse( e.target.responseText );
+    var jsonData = ( e.target.responseText );
+    console.log( jsonData );
+    form.reset();
 }

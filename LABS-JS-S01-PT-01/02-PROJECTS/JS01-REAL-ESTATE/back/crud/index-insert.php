@@ -13,7 +13,11 @@ $price    = $_POST[ 'price' ];
 $conn = mysqli_connect( $db_host, $db_user, $db_pass, $db_name );
 if( ! $conn ) { die( "DB connection failed.."  ); }
 
-$query = "INSERT INTO draftproperties VALUES( '$property', $location, $price )";
+
+
+$query = "INSERT INTO draftproperties(id, available, property, location, price) VALUES( NULL, DEFAULT, '$property', $location, $price )";
+// echo $query;
+
 $query_result = mysqli_query( $conn, $query );
 $message = $query_result ? [ "message" => "OK" ] : [ "message" => "NO" ];
 

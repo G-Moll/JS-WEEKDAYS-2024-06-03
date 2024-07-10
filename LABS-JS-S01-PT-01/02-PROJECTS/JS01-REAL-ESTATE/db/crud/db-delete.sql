@@ -9,8 +9,8 @@ create table draftproperties(
 	price INT( 11 ) NOT NULL
 );
 
-INSERT INTO draftproperties VALUES( NULL, DEFAULT, "EAR House 2024", true, 30000 );
-INSERT INTO draftproperties VALUES( NULL, DEFAULT, "apartment", true, 30000 );
+INSERT INTO draftproperties VALUES( NULL, DEFAULT, "EAR House 2025", true, 30000 );
+INSERT INTO draftproperties VALUES( NULL, DEFAULT, "EAR Apartment 2024", true, 30000 );
 INSERT INTO draftproperties VALUES( NULL, DEFAULT, "house", false, 50000 );
 INSERT INTO draftproperties VALUES( NULL, DEFAULT, "parking lot", true ,80000 );
 INSERT INTO draftproperties VALUES( NULL, DEFAULT, "apartment", false, 35000 );

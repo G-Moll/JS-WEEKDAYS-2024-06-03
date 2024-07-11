@@ -12,7 +12,8 @@ var inputAvailable = formInputs[ 1 ];
 var inputProperty  = formInputs[ 2 ];
 var inputLocation  = formInputs[ 3 ];
 var inputPrice     = formInputs[ 4 ];
-var findRecord   = document.getElementById( "findRecord" );
+var findRecord     = document.getElementById( "findRecord" );
+var message        = document.getElementById( "message" );
 
 // EventListeners
 findRecord.addEventListener( "click", sendSelectOneData );
@@ -34,8 +35,17 @@ function loadSelectedOneData( e ) {
 	var jsonData = JSON.parse( e.target.responseText );
 
 	console.log( jsonData.data );
-	inputAvailable.value = Boolean( Number( jsonData.data.record.available ) );
-	inputProperty.value = jsonData.data.record.property;
-	inputLocation.value = Boolean( Number( jsonData.data.record.location ) );
-	inputPrice.value = jsonData.data.record.price;
+	if( jsonData.data.status !== "no" ) {
+		inputAvailable.value = strNumToBoolean( jsonData.data.record.available );
+		inputProperty.value = jsonData.data.record.property;
+		inputLocation.value = strNumToBoolean( jsonData.data.record.location );
+		inputPrice.value = jsonData.data.record.price;
+	}
+	else {
+		message.innerHTML = jsonData.data.message;
+	}
+}
+
+function strNumToBoolean( numStrData ) {
+	return Boolean( Number( numStrData ) );
 }

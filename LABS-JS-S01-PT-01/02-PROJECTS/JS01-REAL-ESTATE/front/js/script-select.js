@@ -17,11 +17,13 @@ function loadSelectedData( e ) {
 	var htmlData = "";
 	for( var i = 0; i < jsonData.data.length; i++ ) {
 		var currentRow = jsonData.data[ i ]; 
-		htmlData += "<h3>" + currentRow.property + "</h3>" +
-		"<p>ID: " + currentRow.id + "</p>" +
-		"<p>Location: " + currentRow.location + "</p>" +
-		"<p>Price: " + currentRow.price + "</p>" +
-		"<button>Comprar</button>";
+		htmlData += "<div class='property-details'>" +
+			"<h3>" + currentRow.property + "</h3>" +
+			"<p>ID: " + currentRow.id + "</p>" +
+			"<p>Location: " + currentRow.location + "</p>" +
+			"<p>Price: " + currentRow.price + "</p>" +
+			"<button>Comprar</button>" +
+		"</div>";
 	}
 	holderProperties.innerHTML = htmlData;
 	// console.log( htmlData );

@@ -19,8 +19,8 @@ $query = "SELECT * FROM draftproperties WHERE id=$id";
 $query_result = mysqli_query( $conn, $query );
 
 $message = mysqli_num_rows( $query_result ) > 0 ?
-    [ "message" => "OK", "record" => mysqli_fetch_assoc( $query_result ) ] :
-    [ "message" => "NO, record not found" ];
+    [ "status" => "ok", "message" => "Record found", "record" => mysqli_fetch_assoc( $query_result ) ] :
+    [ "status" => "no","message" => "Record not found" ];
 
 $json_data = [
     "data" => $message

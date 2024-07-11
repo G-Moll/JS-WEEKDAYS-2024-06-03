@@ -1,6 +1,20 @@
+* {
+	margin: 0;
+	font-family: Arial,Arial;
+	font-weight: normal;
+}
 body {
 	margin: 0;
-	background-image: url( "../imgs/pexels-expect-best-79873-323776.jpg" );
+	background-image: url( "../imgs/background-home.jpg" );
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#wrapper {
+	background-color: rgba(255,255,255,0.5);
+	width: 800px;
+	padding: 20px;
+	margin: 80px auto;
 }
 
 .form-data {
@@ -11,6 +25,9 @@ body {
 .holder-properties {
 	margin: auto;
 	padding: 8px;
-	width: 600px;
-	background-color: rgba(255,255,255,0.5);
+	background-color: white;
+}
+
+.property-details {
+	
 }

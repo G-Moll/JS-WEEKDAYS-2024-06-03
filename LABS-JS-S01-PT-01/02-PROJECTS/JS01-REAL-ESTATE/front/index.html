@@ -4,30 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-    <!-- INSERT DATA TO DB -->
-    <!-- <form method="post" action="http://localhost:8080/crud/index-insert.php"> -->
-    <form>
-        <input id="id" type="text" value="1" placeholder="id">
-        <input id="available" type="text" value="true" placeholder="available">
-        <input id="property" type="text" value="House EAR 2025" placeholder="property">
-        <input id="location" type="text" value="true" placeholder="location">
-        <input id="price" type="text" value="28000" placeholder="price">
+    <div id="wrapper">
+            
+        <!-- INSERT DATA TO DB -->
+        <!-- <form method="post" action="http://localhost:8080/crud/index-insert.php"> -->
+        <form>
+            <input id="id" type="text" value="1" placeholder="id">
+            <input id="available" type="text" value="true" placeholder="available">
+            <input id="property" type="text" value="House EAR 2025" placeholder="property">
+            <input id="location" type="text" value="true" placeholder="location">
+            <input id="price" type="text" value="28000" placeholder="price">
 
-        <!-- <input type="submit" name="" value="SEND DATA"> -->
-        <br>
-        <button id="insertRecord" name="">CREATE RECORD</button>
-        <br>
-        <button id="updateRecord" name="">UPDATE RECORD</button>
-        <br>
-        <button id="deleteRecord" name="">DELETE RECORD</button>
-        <br>
-        <button id="findRecord" name="">FIND RECORD</button>
-    </form>
+            <!-- <input type="submit" name="" value="SEND DATA"> -->
+            <br>
+            <button id="insertRecord" name="">CREATE RECORD</button>
+            <br>
+            <button id="updateRecord" name="">UPDATE RECORD</button>
+            <br>
+            <button id="deleteRecord" name="">DELETE RECORD</button>
+            <br>
+            <button id="findRecord" name="">FIND RECORD</button>
+        </form>
+        <p id="message"></p>
 
-    <!-- GET DATA FROM DB -->
-    <div id="holder-properties"></div>
+        <!-- GET DATA FROM DB -->
+        <h2>Properties</h2>
+        <div id="holder-properties" class="holder-properties"></div>
+    </div>
 
 <script type="text/javascript" src="js/script-select.js"></script>
 <script type="text/javascript" src="js/script-insert.js"></script>

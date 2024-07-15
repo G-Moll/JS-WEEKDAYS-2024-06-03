@@ -19,6 +19,7 @@ function loadSelectedData( e ) {
 		var currentRow = jsonData.data[ i ]; 
 		htmlData += "<div class='property-details'>" +
 			"<h3>" + currentRow.property + "</h3>" +
+			"<img src='imgs/" + "thumbnail.jpg" + "''>" +
 			"<p>ID: " + currentRow.id + "</p>" +
 			"<p>Location: " + currentRow.location + "</p>" +
 			"<p>Price: " + currentRow.price + "</p>" +

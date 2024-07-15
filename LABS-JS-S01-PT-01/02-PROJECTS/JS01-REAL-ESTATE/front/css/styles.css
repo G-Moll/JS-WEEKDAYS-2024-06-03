@@ -19,15 +19,67 @@ body {
 
 .form-data {
 	margin: auto;
-	width: 600px;
+/*	width: 400px;*/
+}
+.form-data input[type=text] {
+	width: 47%;
+	padding: 8px;
+	margin-bottom: 8px;
+}
+.form-data button {
+	font-size: 1.125em;
+	width: 50%;
+	border: none;
+	padding: 8px;
+	border-radius: 4px;
+	color: cornflowerblue;
+	background-color: white;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.form-data button:hover {
+	background-color: cornflowerblue;
+	color: white;
 }
 
 .holder-properties {
+	width: inherit;
 	margin: auto;
-	padding: 8px;
-	background-color: white;
+	padding: 16px;
+	background-color: rgba(255, 255, 255, 0.75);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .property-details {
-	
+	background-color: rgba(255, 255, 255, 0.75);
+	width: 360px;
+	padding: 16px;
+	margin-bottom: 16px;
+	box-shadow: 0 3px 3px #878787;
+	border-radius: 8px;
 }
+.property-details img {
+	width: 100%;
+}
+.property-details button {
+	font-size: 1.125em;
+	width: 100%;
+	border: none;
+	padding: 8px;
+	border-radius: 4px;
+	color: cornflowerblue;
+	background-color: white;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.property-details button:hover {
+	background-color: cornflowerblue;
+	color: white;
+}
+
+
+

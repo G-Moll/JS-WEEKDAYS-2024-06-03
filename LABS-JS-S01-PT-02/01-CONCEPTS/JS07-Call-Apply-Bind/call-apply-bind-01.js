@@ -14,7 +14,7 @@ var personTwo = { name: "Peter" };
 // greet.apply( personOne, [ "Hello Two" ] );
 // greet.apply( personTwo, [ "Hola Two" ] );
 
-// bind - amarrar, atar, vincular
+// bind
 var personThree = { name: "Paul" }
 var greetPaul = greet.bind( personThree );
 console.log( greetPaul );

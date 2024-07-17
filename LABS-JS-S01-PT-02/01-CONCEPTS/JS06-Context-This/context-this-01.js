@@ -1,4 +1,4 @@
-// Global Object window, _global
+// Global Object: window, _global, MongoDB
 console.log( this );
 
 function a() {
@@ -26,7 +26,7 @@ var objectOne = {
 name = "The global object";
 function hola() {
 	console.log( "Inside ==== object ", this.name );
-	console.log( "Inside ==== object ", this == global, this == window );
+	console.log( "Inside ==== object ", this == global );
 }
 hola();
 

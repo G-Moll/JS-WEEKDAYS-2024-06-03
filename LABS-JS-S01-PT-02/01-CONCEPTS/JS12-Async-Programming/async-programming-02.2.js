@@ -1,6 +1,9 @@
 // Async Programming
 // AJAX/Callback
 // Promises
+// Unsolved-Pending
+// Resolved
+// Rejected
 
 // Promisefying: xhr
 let customPromise = new Promise( ( resolve, reject ) => {

@@ -1,17 +1,10 @@
-var holderProperties = document.getElementById( 'holder-properties' );
-// console.log( holderProperties );
+import { AJAXRequest } from "../models/client/AJAXRequest.js";
 
-// AJAX
-// Asynchrnous JavaScript And XML
-
-var endpoint = "http://localhost:8080/crud/index-select.php";
-var xhr = new XMLHttpRequest();
-xhr.open( "GET", endpoint, true );
-xhr.send();
-
-xhr.addEventListener( "load", loadSelectedData  );
+var requestSelectAll = new AJAXRequest( "GET", "http://localhost:8080/crud/select-all.php", loadSelectedData );
+requestSelectAll.send();
 
 function loadSelectedData( e ) {
+	var holderProperties = document.getElementById( 'holder-properties' );
 	var jsonData = JSON.parse( e.target.responseText );
 
 	var htmlData = "";
@@ -24,8 +17,6 @@ function loadSelectedData( e ) {
 		"<button>Comprar</button>";
 	}
 	holderProperties.innerHTML = htmlData;
-	// console.log( htmlData );
-	// console.log( jsonData );
 }
 
-
+export { requestSelectAll }

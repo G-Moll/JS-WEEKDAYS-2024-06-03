@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS</title>
+</head>
+<body>
+    <!-- INSERT DATA TO DB -->
+    <!-- <form method="post" action="http://localhost:8080/crud/index-insert.php"> -->
+    <form>
+        <input id="id" type="text" value="1" placeholder="id">
+        <input id="available" type="text" value="true" placeholder="available">
+        <input id="property" type="text" value="House EAR 2025" placeholder="property">
+        <input id="location" type="text" value="true" placeholder="location">
+        <input id="price" type="text" value="28000" placeholder="price">
+
+        <!-- <input type="submit" name="" value="SEND DATA"> -->
+        <br>
+        <button id="insertRecord" name="">CREATE RECORD</button>
+        <br>
+        <button id="updateRecord" name="">UPDATE RECORD</button>
+        <br>
+        <button id="deleteRecord" name="">DELETE RECORD</button>
+        <br>
+        <button id="findRecord" name="">FIND RECORD</button>
+    </form>
+
+    <!-- GET DATA FROM DB -->
+    <div id="holder-properties"></div>
+
+<script type="text/javascript" src="js/script-select.js"></script>
+<script type="text/javascript" src="js/script-insert.js"></script>
+<script type="text/javascript" src="js/script-update.js"></script>
+<script type="text/javascript" src="js/script-delete.js"></script>
+<script type="text/javascript" src="js/script-select-one.js"></script>
+</body>
+</html>

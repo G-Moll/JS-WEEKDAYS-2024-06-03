@@ -1,0 +1,9 @@
+_drafts
+
+# db/*
+# !db/drafts/
+
+# front/*
+# !front/js/
+# !front/data/
+front/imgs/real-estate

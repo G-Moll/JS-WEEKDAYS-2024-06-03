@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+	background-image: url( "../imgs/pexels-expect-best-79873-323776.jpg" );
+}
+
+.form-data {
+	margin: auto;
+	width: 600px;
+}
+
+.holder-properties {
+	margin: auto;
+	padding: 8px;
+	width: 600px;
+	background-color: rgba(255,255,255,0.5);
+}

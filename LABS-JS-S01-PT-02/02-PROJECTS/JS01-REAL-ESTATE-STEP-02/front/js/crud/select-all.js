@@ -1,6 +1,11 @@
 import { AJAXRequest } from "../models/client/AJAXRequest.js";
+import { endpointsList } from "../config/endpoints-list.js";
 
-var requestSelectAll = new AJAXRequest( "GET", "http://localhost:8080/crud/select-all.php", loadSelectedData );
+var requestSelectAll = new AJAXRequest(
+	"GET",
+	endpointsList.buildEndpoint( "realEstate", "select-all" ),
+	loadSelectedData
+);
 requestSelectAll.send();
 
 function loadSelectedData( e ) {

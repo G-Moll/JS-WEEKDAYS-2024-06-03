@@ -1,9 +1,9 @@
 import { AJAXRequest } from "../models/client/AJAXRequest.js";
-import { endpointsList } from "../config/endpoints-list.js";
+import { endpointsList } from "../config/endpointsList.js";
 
 var requestSelectAll = new AJAXRequest(
 	"GET",
-	endpointsList.buildEndpoint( "realEstate", "select-all" ),
+	endpointsList.endpointBuild( "properties", "select-all" ),
 	loadSelectedData
 );
 requestSelectAll.send();

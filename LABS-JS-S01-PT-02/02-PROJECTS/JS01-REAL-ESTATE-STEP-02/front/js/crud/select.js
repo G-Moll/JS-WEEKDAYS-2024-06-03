@@ -5,6 +5,7 @@ var endpoint = "http://localhost:8080/crud/index-select-one.php";
 // var priceData = 87600;
 
 // DOM Elements
+
 var form = document.getElementsByTagName( "form" )[ 0 ];
 var formInputs = form.getElementsByTagName( "input" );
 var inputId        = formInputs[ 0 ];

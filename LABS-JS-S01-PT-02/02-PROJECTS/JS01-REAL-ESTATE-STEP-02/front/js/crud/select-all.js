@@ -1,5 +1,6 @@
 import { AJAXRequest } from "../models/client/AJAXRequest.js";
 import { endpointsList } from "../config/endpointsList.js";
+import { holderProperties } from "../config/domElements.js";
 
 var requestSelectAll = new AJAXRequest(
 	"GET",
@@ -9,7 +10,6 @@ var requestSelectAll = new AJAXRequest(
 requestSelectAll.send();
 
 function loadSelectedData( e ) {
-	var holderProperties = document.getElementById( 'holder-properties' );
 	var jsonData = JSON.parse( e.target.responseText );
 
 	var htmlData = "";

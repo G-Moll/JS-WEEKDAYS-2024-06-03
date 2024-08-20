@@ -24,4 +24,7 @@ function loadSelectedData( e ) {
 	holderProperties.innerHTML = htmlData;
 }
 
-export { requestSelectAll }
+var propertiesSelectAllModule = {
+	name: "Properties SelectAll Module"
+}
+export { propertiesSelectAllModule }

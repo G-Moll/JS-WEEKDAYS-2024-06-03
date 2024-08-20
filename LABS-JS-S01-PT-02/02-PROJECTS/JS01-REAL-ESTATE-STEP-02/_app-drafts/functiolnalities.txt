@@ -1,0 +1,13 @@
+FUNCIONALIDADES
+- Sólo cierto tipo de usuarios podrán dar de alta las propiedades
+- Los usuarios generales pueden
+    - Ver todo el catálogo de productos
+    - Buscar productos por
+        - Precio
+        - Zona
+        - Núm de habitaciones
+- Las propiedades tienen:
+    - Descripción
+    - Fotografías (por lo menos dos)
+    - Mapa (con coordenadas)
+

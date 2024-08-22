@@ -6,6 +6,7 @@ FUNCIONALIDADES
         - Precio
         - Zona
         - Núm de habitaciones
+    - Agregar sus favoritos
 - Las propiedades tienen:
     - Descripción
     - Fotografías (por lo menos dos)

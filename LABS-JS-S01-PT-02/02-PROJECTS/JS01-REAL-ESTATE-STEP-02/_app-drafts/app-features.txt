@@ -1,5 +1,13 @@
 FUNCIONALIDADES
 - Sólo cierto tipo de usuarios podrán dar de alta las propiedades
+    ROLES
+        - id
+        - type
+        - description
+        1   Admin           Persona de de alta propiedades
+        2   Arrendatario    Persona....
+        * Admins
+        * Arrendatario
 - Los usuarios generales pueden
     - Ver todo el catálogo de productos
     - Buscar productos por
@@ -7,8 +15,51 @@ FUNCIONALIDADES
         - Zona
         - Núm de habitaciones
     - Agregar sus favoritos
+    USERS
+        - name
+        - address
+        - role_id 2
+
+        - email
+            SELECT FROM TABLE WHERE EMAIL LIKE "%a@gmail.com%"
+            "a@gmail.com, a@live.com"
+            b@gmail.com, b@live.com
+        - phones
+            "55 12...., 55 10...."
+        - favorites
+            1, 10, 80, 15
+            1, 2, 4, 20, 15
+            3
 - Las propiedades tienen:
     - Descripción
     - Fotografías (por lo menos dos)
     - Mapa (con coordenadas)
+    PROPERTIES
+        - id
+        - available
+        - property
+        - price
+        - pictures
+            "prop1-img1.png, prop1-img2.png"
+        - location TRUE
+            { "longitude": 1121323, "latitude": 89232323, "altitude": 98983 }
+            [ 1121323, 89232323, 98983 ]
+    FAVORITES
+        - id
+        - user_id
+        - property_id
+    PICTURES
+        - id
+        - name
+        - property_id
+    PHONES
+        - id
+        - lada
+        - type
+        - number
+        - user_id
+    EMAILS
+        - id
+        - address
+        - user_id
 

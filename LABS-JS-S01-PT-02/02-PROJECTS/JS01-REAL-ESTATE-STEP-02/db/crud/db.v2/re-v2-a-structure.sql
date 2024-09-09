@@ -1,3 +1,4 @@
+-- DROP DATABASE rev2;
 SHOW DATABASES;
 CREATE DATABASE rev2;
 USE rev2;
@@ -24,7 +25,8 @@ CREATE TABLE Properties(
 	property VARCHAR( 255 ) NOT NULL,
 	rooms INT( 11 ) UNSIGNED,
 	location JSON NOT NULL,
-	street VARCHAR( 255 ) NOT NULL,
+	street_type VARCHAR( 255 ) NOT NULL,
+	street_name VARCHAR( 255 ) NOT NULL,
 	street_number VARCHAR( 28 ) NOT NULL,
 	colony VARCHAR( 255 ) NOT NULL,
 	alcaldy VARCHAR( 255 ) NOT NULL,

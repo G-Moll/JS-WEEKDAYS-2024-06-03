@@ -21,7 +21,6 @@ while( $record = mysqli_fetch_assoc( $query_result ) ) {
 $json_data = [
     "data" => $all_records
 ];
-
 echo json_encode( $json_data );
 
 ?>

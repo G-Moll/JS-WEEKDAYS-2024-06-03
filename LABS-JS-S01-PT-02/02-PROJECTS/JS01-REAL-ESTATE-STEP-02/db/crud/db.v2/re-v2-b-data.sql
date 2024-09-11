@@ -18,7 +18,7 @@ INSERT INTO PropertyTypes VALUES
 
 INSERT INTO Properties VALUES
 	( NULL, DEFAULT, "EAR Apartment 2024", 2,
-		'{ "latitude": "19.403031023667694", "longitude": "-99.18036167959114" }',
+		'{ "latitude": 19.403031023667694, "longitude": -99.18036167959114 }',
 		"Avenida", "José Martí", "119",
 		"Escandón I Secc", "Miguel Hidalgo", "11800",
 		"Ciudad de México", "CDMX",

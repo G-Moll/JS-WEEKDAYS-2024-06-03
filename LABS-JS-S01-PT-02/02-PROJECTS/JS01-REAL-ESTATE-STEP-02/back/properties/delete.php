@@ -1,14 +1,9 @@
 <?php
-header( "Access-Control-Allow-Origin: *" );
-
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "rdk_js_weekdays";
+include_once( "../config/headers.php" );
+include_once( "../config/db-setup.php" );
 
 $id = $_POST[ 'id' ];
 
-$conn = mysqli_connect( $db_host, $db_user, $db_pass, $db_name );
 if( ! $conn ) { die( "DB connection failed.."  ); }
 
 $query = "UPDATE draftproperties SET available=FALSE WHERE id=$id";

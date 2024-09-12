@@ -1,16 +1,10 @@
 <?php
-header( "Access-Control-Allow-Origin: http://localhost:3000" );
-
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "rdk_js_weekdays";
-
-$conn = mysqli_connect( $db_host, $db_user, $db_pass, $db_name );
+include_once( "../config/headers.php" );
+include_once( "../config/db-setup.php" );
 
 if( ! $conn ) { die( "DB connection failed.."  ); }
 
-$query = "SELECT * FROM draftproperties";
+$query = "SELECT * FROM Properties";
 $query_result = mysqli_query( $conn, $query );
 $all_records = [];
 

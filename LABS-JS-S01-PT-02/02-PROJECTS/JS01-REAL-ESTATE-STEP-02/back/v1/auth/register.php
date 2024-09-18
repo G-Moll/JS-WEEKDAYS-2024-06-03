@@ -12,7 +12,7 @@ $role_id  = $_POST[ 'role_id' ];
 
 if( ! $conn ) { die( "DB connection failed.."  ); }
 
-$password = password_hash( $password , PASSWORD_BCRYPT );
+$password = password_hash( $password, PASSWORD_BCRYPT );
 $query = "INSERT INTO Users VALUES( NULL, '$name', '$password', '$lada', '$phone', '$email', $role_id );";
 
 $message;

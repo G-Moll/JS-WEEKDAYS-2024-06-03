@@ -2,6 +2,7 @@ var endpointsList = {
 	default: {
 		domain: "http://localhost",
 		port: 80,
+		versionAPI: "v2",
 		ext: ".php"
 	},
 	properties: {
@@ -19,6 +20,8 @@ var endpointsList = {
 			( this[ groupName ].domain ? this[ groupName ].domain : this.default.domain ) +
 			":" +
 			( this[ groupName ].port ? this[ groupName ].port : this.default.port ) +
+			"/" +
+			( this[ groupName ].versionAPI ? this[ groupName ].versionAPI : this.default.versionAPI ) +
 			"/" +
 			groupName +
 			"/" +

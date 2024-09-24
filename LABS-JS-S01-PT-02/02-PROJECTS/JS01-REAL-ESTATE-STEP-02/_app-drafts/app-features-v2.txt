@@ -1,0 +1,20 @@
+JS
+    - Registro (register.html)
+    - Dashboard (dashboard.html, dashboard.js)
+    - Auth (auth.js, logout.js)
+    - Login (login.html, login.js)
+    
+PHP
+    - Registro (register.php)
+    - Login (login.php) token=abc123
+    - Auth (auth.php)   token
+    - Logout (logout.php)
+    start_session();
+
+MPA - Multiple Page App (HTMLs)
+SPA - Single Page App (HTML)
+
+Home (index.html)
+    Dashboard (dashboard.html)
+        - Usuarios
+        - Propiedades

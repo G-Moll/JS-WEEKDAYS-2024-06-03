@@ -13,10 +13,15 @@ $message;
 if( mysqli_num_rows( $query_result ) >= 0 ){
 	$record = mysqli_fetch_assoc( $query_result );
 	if( password_verify( $password, $record[ "password" ] ) ) {
+		session_start();
+		$_SESSION[ "user_id" ] = $record[ "id" ];
+		$_SESSION[ "is_authenticated" ] = true;
+		$_SESSION[ "auth_token" ] = bin2hex( random_bytes( 32 ) );
 		$message = [
 			"status" => "ok",
+			"user_id" => $_SESSION[ "user_id" ],
 			"message" => "Record found",
-			"token" => bin2hex( random_bytes( 32 ) )
+			"token" => $_SESSION[ "auth_token" ]
 		];
 	}
 	else {

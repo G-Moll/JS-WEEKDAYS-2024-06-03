@@ -14,6 +14,12 @@ var updateRecord   = domFinder.getUI( "#updateRecord" );
 var deleteRecord   = domFinder.getUI( "#deleteRecord" );
 var findRecord     = domFinder.getUI( "#findRecord" );
 
+// Login Form
+var loginPassword  = domFinder.getUI( "#loginPassword" );
+var loginEmail     = domFinder.getUI( "#loginEmail" );
+var loginButton    = domFinder.getUI( "#loginButton" );
+
+
 export {
 	holderProperties,
 
@@ -28,7 +34,11 @@ export {
 	insertRecord,
 	updateRecord,
 	deleteRecord,
-	findRecord
+	findRecord,
+
+	loginPassword,
+	loginEmail,
+	loginButton
 };
 
 var obj = { name: "Joshua" }

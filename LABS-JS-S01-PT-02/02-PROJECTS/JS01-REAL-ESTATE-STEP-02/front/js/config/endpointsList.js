@@ -9,10 +9,10 @@ var endpointsList = {
 		port: 8080
 	},
 	auth: {
-		domain: "http://localhost",
-		group: "",
+		// domain: "http://localhost",
+		// group: "",
 		port: 8080,
-		ext: ".py"
+		// ext: ".py"
 	},
 	endpointBuild: function endpointBuild( groupName, endpointName ) {
 		"http://localhost:8080/properties/select-all"

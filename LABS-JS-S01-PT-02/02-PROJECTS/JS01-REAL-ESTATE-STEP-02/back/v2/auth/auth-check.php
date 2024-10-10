@@ -14,7 +14,7 @@ if(
 	isset( $allHeaders[ "Authorization" ] ) &&
 	$allHeaders[ "Authorization" ]
 ) {
-	$received_token = str_replace("Bearer ", "", $allHeaders[ "Authorization" ]) ;
+	$received_token = str_replace( "Bearer ", "", $allHeaders[ "Authorization" ] ) ;
 	// "Bearer 5fb66080484ba3ada1d09b6a38fa6fe15578b7de53b561a9b2ac74391509d059"
 	if( $received_token === $_SESSION[ "auth_token" ] ) {
 		$status_code = 200;

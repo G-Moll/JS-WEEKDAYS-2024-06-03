@@ -12,7 +12,7 @@ function sendInsertData( e ) {
         endpointsList.endpointBuild( "properties", "insert" ),
         loadInsertedData
     );
-    requestInsert.setHeader();
+    // requestInsert.setHeader();
     requestInsert.send( "property=" + inputProperty.value + "&location=" + inputLocation.value + "&price=" + inputPrice.value );
 }
 

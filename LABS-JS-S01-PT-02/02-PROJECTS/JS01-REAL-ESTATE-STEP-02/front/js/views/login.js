@@ -8,14 +8,12 @@ loginButton.addEventListener( "click", loginButtonClick );
 function loginButtonClick( e ) {
 	e.preventDefault();
 
-	// console.log( loginPassword.value, loginEmail.value );
-
 	var requestLogin = new AJAXRequest(
 		"POST",
 		endpointsList.endpointBuild( "auth", "login" ),
 		responseLogin
 	);
-	requestLogin.setHeader();
+	requestLogin.setHeader( "encodeURL" );
 	requestLogin.send(
 		"password=" + loginPassword.value +
 		"&email=" + loginEmail.value
@@ -25,7 +23,12 @@ function loginButtonClick( e ) {
 function responseLogin ( e ) {
 	var jsonData = JSON.parse( e.target.responseText ).data;
 	if( jsonData.status === "ok" ) {
+		sessionStorage.setItem( "auth_token", jsonData.token );
 		window.location = "http://localhost:3000/views/dashboard.html";
+	}
+	else {
+		alert( jsonData.status );
+		console.log( jsonData );
 	}
 }
 

@@ -21,6 +21,7 @@ AJAXRequest.prototype.setHeader = function setHeader( headerChoice, authToken ) 
 	);
 };
 
+
 AJAXRequest.prototype.send = function send( payload ) {
 	this.xhr.send( payload );
 };

@@ -44,11 +44,7 @@ else {
 
 
 echo json_encode([
-	"data" => $message,
-	"headers" => $allHeaders,
-	"user_id" => $_SESSION[ "user_id" ],
-	"is_authenticated" => $_SESSION[ "is_authenticated" ],
-	"auth_token" => $_SESSION[ "auth_token" ]
+	"data" => $message
 ]);
 
 

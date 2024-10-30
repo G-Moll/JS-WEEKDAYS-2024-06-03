@@ -9,6 +9,7 @@ AuthChecker.check = function check( reponseAuthCheck ) {
 		endpointsList.endpointBuild( "auth", "auth-check" ),
 		reponseAuthCheck
 	);
+	requestAuthCheck.withCredentials();
 	requestAuthCheck.setHeader( "encodeAUTH", sessionStorage.getItem( "auth_token" ) );
 	requestAuthCheck.send();
 };

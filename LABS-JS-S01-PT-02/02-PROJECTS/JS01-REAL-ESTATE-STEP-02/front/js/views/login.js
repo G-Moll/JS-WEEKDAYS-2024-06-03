@@ -13,6 +13,7 @@ function loginButtonClick( e ) {
 		endpointsList.endpointBuild( "auth", "login" ),
 		responseLogin
 	);
+	requestLogin.withCredentials();
 	requestLogin.setHeader( "encodeURL" );
 	requestLogin.send(
 		"password=" + loginPassword.value +

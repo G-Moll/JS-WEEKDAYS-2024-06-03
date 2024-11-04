@@ -18,6 +18,8 @@ var findRecord     = domFinder.getUI( "#findRecord" );
 var loginPassword  = domFinder.getUI( "#loginPassword" );
 var loginEmail     = domFinder.getUI( "#loginEmail" );
 var loginButton    = domFinder.getUI( "#loginButton" );
+var loginCheckButton = domFinder.getUI( "#loginCheckButton" );
+var logoutButton    = domFinder.getUI( "#logoutButton" );
 
 
 export {
@@ -38,7 +40,9 @@ export {
 
 	loginPassword,
 	loginEmail,
-	loginButton
+	loginButton,
+	loginCheckButton,
+	logoutButton
 };
 
 var obj = { name: "Joshua" }

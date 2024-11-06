@@ -14,6 +14,12 @@ var updateRecord   = domFinder.getUI( "#updateRecord" );
 var deleteRecord   = domFinder.getUI( "#deleteRecord" );
 var findRecord     = domFinder.getUI( "#findRecord" );
 
+// Property Images Form
+var fileFolder 	   = domFinder.getUI( "#fileFolder" );
+var fileInput 	   = domFinder.getUI( "#fileInput" );
+var fileUpload 	   = domFinder.getUI( "#fileUpload" );
+
+
 // Login Form
 var loginPassword  = domFinder.getUI( "#loginPassword" );
 var loginEmail     = domFinder.getUI( "#loginEmail" );
@@ -24,6 +30,10 @@ var logoutButton    = domFinder.getUI( "#logoutButton" );
 
 export {
 	holderProperties,
+
+	fileFolder,
+	fileInput,
+	fileUpload,
 
 	form,
 	formInputs,

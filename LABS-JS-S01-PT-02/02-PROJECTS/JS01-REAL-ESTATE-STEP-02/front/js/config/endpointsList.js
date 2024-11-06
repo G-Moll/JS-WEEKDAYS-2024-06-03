@@ -14,6 +14,9 @@ var endpointsList = {
 		port: 8080,
 		// ext: ".py"
 	},
+	upload: {
+		port: 8080,
+	},
 	endpointBuild: function endpointBuild( groupName, endpointName ) {
 		"http://localhost:8080/properties/select-all"
 		return "" +

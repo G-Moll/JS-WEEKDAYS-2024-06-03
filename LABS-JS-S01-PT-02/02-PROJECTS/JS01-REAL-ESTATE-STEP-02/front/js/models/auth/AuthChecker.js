@@ -14,6 +14,4 @@ AuthChecker.check = function check( reponseAuthCheck ) {
 	requestAuthCheck.send();
 };
 
-export {
-	AuthChecker
-};
+export { AuthChecker };

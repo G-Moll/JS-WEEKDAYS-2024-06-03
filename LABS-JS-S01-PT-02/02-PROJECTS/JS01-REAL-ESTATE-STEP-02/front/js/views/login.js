@@ -1,7 +1,7 @@
 import { AJAXRequest } from "../models/client/AJAXRequest.js";
-import { AuthLogout } from "../models/auth/AuthLogout.js";
-// import { AuthLoging } from "../models/auth/AuthLogin.js";
+import { AuthLogin } from "../models/auth/AuthLogin.js";
 import { AuthChecker } from "../models/auth/AuthChecker.js";
+import { AuthLogout } from "../models/auth/AuthLogout.js";
 
 import { endpointsList } from "../config/endpointsList.js";
 import { loginPassword, loginEmail, loginButton, loginCheckButton, logoutButton } from "../config/domElements.js";
@@ -14,17 +14,12 @@ logoutButton.addEventListener( "click", logoutButtonClick );
 function loginButtonClick( e ) {
 	e.preventDefault();
 
-	var requestLogin = new AJAXRequest(
-		"POST",
-		endpointsList.endpointBuild( "auth", "login" ),
-		responseLogin
-	);
-	requestLogin.withCredentials();
-	requestLogin.setHeader( "encodeURL" );
-	requestLogin.send(
-		"password=" + loginPassword.value +
-		"&email=" + loginEmail.value
-	);
+	var loginData = {
+		password: loginPassword.value,
+		email: loginEmail.value
+	};
+
+	AuthLogin.login( loginData, responseLogin );
 }
 
 function loginCheckButtonClick( e ) {

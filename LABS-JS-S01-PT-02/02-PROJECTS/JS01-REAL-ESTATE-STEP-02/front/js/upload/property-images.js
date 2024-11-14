@@ -12,13 +12,13 @@ fileUpload.addEventListener( "click", function( e ) {
 	if( files.length > 0 ) {
 		for( var i = 0; i < files.length; i++  ) {
 			var file = files[ i ];
-			// if( ! allowedTypes.includes( file.type ) ) {
-			// 	alert( "File type not allowed" + file.type );
-			// 	continue;
-			// }
+			if( ! allowedTypes.includes( file.type ) ) {
+				console.log( "File type not allowed " + file.name );
+				continue;
+			}
 			formData.append( "files[]", file );
 		}
-		formData.append( "folderName", fileFolder.value  );
+		formData.append( "fileFolder", fileFolder.value );
 
 		var requestFileUpload = new AJAXRequest(
 			"POST",
@@ -31,12 +31,6 @@ fileUpload.addEventListener( "click", function( e ) {
 	else {
 		console.log( "Choose at leaset one file..." );
 	}
-
-
-	// console.log( files );
-
-
-	// console.log( e.type, "Image form" );
 });
 
 

@@ -1,5 +1,5 @@
 _drafts
-
+.gitignore
 # db/*
 # !db/drafts/
 
@@ -7,3 +7,5 @@ _drafts
 # !front/js/
 # !front/data/
 front/imgs/real-estate
+
+back/v2/public/property-images/*

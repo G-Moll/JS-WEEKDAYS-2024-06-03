@@ -6,10 +6,10 @@
 	</i>
 	<p>
 		<i>
-			<img src="" id="i03" class="xyz" action-fav>
+			<img src="" id="i03" class="like" data-action="like" action="like">
 		</i>
 		<i>
-			<img src="" id="i04" class="xyz" action-fav>
+			<img src="" id="i04" class="vote" data-action="vote" action="vote">
 		</i>
 	</p>
 </div>
@@ -20,8 +20,9 @@ container.addEventListener( "click", clicked );
 
 function clicked( e ) {
 	if( e.target.tagName == "IMG" ) {
-	if( e.target.className == "xyz" ) {
-	if( e.target.attribute == "action-fav" ) {
+	if( e.target.className == "like" ) {
+	if( e.target.getAttribute( "data-action" ) == "vote" ) {
+	if( e.target.getAttribute( "action" ) == "vote" ) {
 		fun...
 	}
 }

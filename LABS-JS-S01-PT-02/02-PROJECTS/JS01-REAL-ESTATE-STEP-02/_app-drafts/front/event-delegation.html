@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#container { background: lightblue; padding:4px; }
+		.like, .vote { background: coral; color:white; padding:4px; cursor:pointer;  }
+	</style>
+</head>
+<body>
+
+<h1>Event Delegation</h1>
+
+<div id="container">
+	<div>
+		<h3>Recipe</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		<span class="like">Like</span>
+		<span class="vote">Vote</span>
+	</div>
+	<div>
+		<h3>Recipe</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		<span class="like">Like</span>
+		<span class="vote">Vote</span>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var container = document.getElementById( "container" );
+	container.addEventListener( "click", clicked );
+
+	function clicked( e ) {
+		if( e.target.className == "like" ) {
+			console.log( "Calling like function" );
+		}
+		else if( e.target.className == "vote" ) {
+			console.log( "Calling vote function" );
+		}
+	}
+</script>
+
+</body>
+</html>

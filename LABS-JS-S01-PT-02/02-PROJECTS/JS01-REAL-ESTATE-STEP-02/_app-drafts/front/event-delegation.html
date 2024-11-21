@@ -5,8 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<style type="text/css">
-		#container { background: lightblue; padding:4px; }
-		.like, .vote { background: coral; color:white; padding:4px; cursor:pointer;  }
+		* { font-family: Calibri; }
+		#container { background: lightblue; padding: 8px; }
+		.recipe-block { border: 1px solid crimson; margin: 8px; padding: 8px; }
+		.like, .vote { background: coral; color: white; padding: 8px; cursor: pointer; display: inline-block; border-radius: 4px; }
+		.create, .select, .update, .delete, .nothing { padding: 4px; }
+		.create { background-color: lightgreen; }
+		.select { background-color: lightcyan; }
+		.update { background-color: lightgoldenrodyellow; }
+		.delete { background-color: lightpink; }
+		.nothing { background-color: grey; }
+		h3 { background-color: rgba( 255, 255, 255, 0.25 ); }
 	</style>
 </head>
 <body>
@@ -14,13 +23,13 @@
 <h1>Event Delegation</h1>
 
 <div id="container">
-	<div>
+	<div class="recipe-block" id="some-id-01">
 		<h3>Recipe</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 		<span class="like">Like</span>
 		<span class="vote">Vote</span>
 	</div>
-	<div>
+	<div class="recipe-block" id="some-id-02">
 		<h3>Recipe</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 		<span class="like">Like</span>
@@ -32,12 +41,61 @@
 	var container = document.getElementById( "container" );
 	container.addEventListener( "click", clicked );
 
+	for( var i = 0; i < 100; i++ ) {
+		container.innerHTML += createRecipe( i );
+	}
+
+	function createRecipe( id ) {
+		var paragraphs = [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"Nullam a est vel purus fermentum eleifend.",
+			"Nam ultrices tortor nec sagittis elementum.",
+			"Maecenas euismod aodio sit amet purus sollicitudin convallis.",
+			"Curabitur sit amet felis a quam interdum dignissim nec at augue."
+		]
+		var paragraph = paragraphs[ Math.floor( Math.random() * paragraphs.length ) ];
+		var actions = [ "create", "select", "update", "delete", "nothing" ];
+		var action = actions[ Math.floor( Math.random() * actions.length ) ];
+
+		return `
+		<div class="recipe-block" id="${ id }">
+			<h3 data-action="some-data-action">Recipe ${ id }</h3>
+			<p action="${ action }" class="${ action }">${ paragraph }</p>
+			<span class="like">Like</span>
+			<span class="vote">Vote</span>
+		</div>`;
+	}
+
 	function clicked( e ) {
+		// ACCIONES PARA LOS SPAN (BOTONES)
+		// - En los primeros 2 ejemplos, sólo validamos si la clase CSS tiene algún valor (like/vote)
 		if( e.target.className == "like" ) {
-			console.log( "Calling like function" );
+			console.log( "Calling like function", e.target.parentElement.id );
 		}
 		else if( e.target.className == "vote" ) {
-			console.log( "Calling vote function" );
+			console.log( "Calling vote function", e.target.parentElement.id );
+		}
+
+		// ACCIONES PARA LOS H3
+		// - En este ejemplo sólo validamos que el target tenga el atributo "data-action", sin importar qué valor pudiera tener
+		// - Los atributos personalizados, por convención comienzan con el prefijo "data-"
+		else if( e.target.getAttribute( "data-action" ) ) {
+			console.log( e.target.innerText );
+		}
+		// ACCIONES PARA LOS P
+		// - En los atributos personalizados el prefijo "data-" se puede omitir, pero no es lo recomendable.
+		// - Aquí  el atributo "action" sí se está validando con algún valor referente CRUD
+		else if(
+			e.target.getAttribute( "action" ) == "create" ||
+			e.target.getAttribute( "action" ) == "select" ||
+			e.target.getAttribute( "action" ) == "update" ||
+			e.target.getAttribute( "action" ) == "delete"
+		) {
+			console.log(
+				"You are performing the " +
+				e.target.getAttribute( "action" ).toUpperCase() +
+				" action: "
+			);
 		}
 	}
 </script>

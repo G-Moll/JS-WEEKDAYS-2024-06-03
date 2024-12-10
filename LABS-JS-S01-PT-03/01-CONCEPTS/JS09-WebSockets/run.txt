@@ -1,7 +1,11 @@
 // ================================================================
 // WebSocket Architecture
-//		WebSocket Server (Deno Native API - TypeScript)
-// 		WebSocket Client (WebSocket Native API - JS ES6)
+//		WebSocket Server
+//			Techlonogy: WebSocket - Deno Native API
+// 			Language: TypeScript
+// 		WebSocket Client
+// 			Techlonogy: WebSocket - Web Broweser Native API
+// 			Language: JavaScript ES6
 
 
 // ================================================================

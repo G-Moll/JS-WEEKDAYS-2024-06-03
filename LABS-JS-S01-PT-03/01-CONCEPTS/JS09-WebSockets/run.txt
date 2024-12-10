@@ -1,5 +1,29 @@
-// WebSocket Server (Deno/TypeScript)
-// Client WebSocket (WebSocket)
+// ================================================================
+// WebSocket Architecture
+//		WebSocket Server (Deno Native API - TypeScript)
+// 		WebSocket Client (WebSocket Native API - JS ES6)
 
+
+// ================================================================
+// INSTALL DENO
+	// Windows
+	$ irm https://deno.land/install.ps1 | iex
+	// Mac/Linux
+	$ curl -fsSL https://deno.land/install.sh | sh
+
+// SAVE LIBS ON CACHE
+	$ deno cache https://deno.land/std@0.186.0/http/server.ts
+
+
+
+// ================================================================
+// RUN SERVERS
+// Backend
+	// Run Backend on localhost
+    $ deno run --allow-net --watch server.ts
+
+// Frontend
+	// Run Frontend on localhost
+    $ php -S localhost:80
 
 
